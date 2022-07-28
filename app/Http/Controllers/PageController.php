@@ -11,8 +11,8 @@ class PageController extends Controller
     {
         $film = Movie::all()
         ->get();
+        return view('movies.index', 
+        ["movies" => '']);
     }
 }
-return view('movies.index', [
-    "movies" => $film
-]);
+
