@@ -9,10 +9,9 @@ class PageController extends Controller
 {
     function index()
     {
-        $film = Movie::all()
-        ->get();
-        return view('movies.index', 
-        ["movies" => '']);
+        $film = Movie::all();
+        return view('app', 
+        ["movies" => $film]);
     }
 }
 
